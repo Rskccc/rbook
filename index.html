@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="intro.html"/>
+<link rel="next" href="movie.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -133,15 +133,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">R Book</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction about Final Projects</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#final-project"><i class="fa fa-check"></i><b>1.1</b> Final Project</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="movie.html"><a href="movie.html"><i class="fa fa-check"></i><b>2</b> The Movie Lens Data (Example)</a><ul>
+<li class="chapter" data-level="2.1" data-path="movie.html"><a href="movie.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="movie.html"><a href="movie.html#data-manipulation"><i class="fa fa-check"></i><b>2.2</b> Data Manipulation</a></li>
+<li class="chapter" data-level="2.3" data-path="movie.html"><a href="movie.html#data-visualization"><i class="fa fa-check"></i><b>2.3</b> Data Visualization</a></li>
+<li class="chapter" data-level="2.4" data-path="movie.html"><a href="movie.html#statistical-analysis"><i class="fa fa-check"></i><b>2.4</b> Statistical Analysis</a></li>
+<li class="chapter" data-level="2.5" data-path="movie.html"><a href="movie.html#results"><i class="fa fa-check"></i><b>2.5</b> Results</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -164,17 +169,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="author"><em>SKCCC R Group</em></p>
 <p class="date"><em>2020-11-05</em></p>
 </div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that
-Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
+<div id="introduction-about-final-projects" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction about Final Projects</h1>
+<div id="final-project" class="section level2">
+<h2><span class="header-section-number">1.1</span> Final Project</h2>
+<p>In this class, students are expected to formulate groups, work on a data
+analysis project using what students learn from the course (and beyond) about
+<em>R</em>, and make a presentation in the last week.</p>
+<p>Ideally, the projects will be based on “real” tasks students have from their
+research or daily work. Several opitions will also be provided by the lecturers
+in case a group has difficulty identifying an appropriate topic.</p>
+<p>The project should</p>
 
+</div>
 </div>
             </section>
 
@@ -182,7 +189,7 @@ Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(
         </div>
       </div>
 
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="movie.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -213,7 +220,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rskccc/rbookindex.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -232,20 +239,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

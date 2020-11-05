@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | R for Biomedical Research</title>
+  <title>Chapter 2 The Movie Lens Data (Example) | R for Biomedical Research</title>
   <meta name="description" content="R book for biomedical research." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | R for Biomedical Research" />
+  <meta property="og:title" content="Chapter 2 The Movie Lens Data (Example) | R for Biomedical Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rskccc/rbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | R for Biomedical Research" />
+  <meta name="twitter:title" content="Chapter 2 The Movie Lens Data (Example) | R for Biomedical Research" />
   
   <meta name="twitter:description" content="R book for biomedical research." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="movie.html"/>
-
+<link rel="prev" href="index.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -164,17 +164,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="movie" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> The Movie Lens Data (Example)</h1>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">2.1</span> Introduction</h2>
+<p>MovieLens (<a href="http://grouplens.org/datasets/movielens/" class="uri">http://grouplens.org/datasets/movielens/</a>) is a movie recommendation
+engine devel- oped and administered by a research group at the University of
+Minnesota. It is very much like the ones included in Netflix and elsewhere, but
+free and open. The latest release of the data includes 20,000,000 individual
+ratings of 27,000 movies by 138,000 users.</p>
+<p>For class, we are using (most of) the much smaller, 1998 release, which includes
+100,000 ratings, of 1700 movies by nearly 1000 users. The data included on the
+class website is modified slightly from the original. Specifically, we have:
+- added informative column names, which were not included in the original data files, but described in a separate readme file
+- removed a couple of columns, including a timestamp indicating when the rating was made
+- changed | delimited files to tab delimited,
+- removed 2 movies of unknown genre,
+- removed duplicate entries for a handful of movies that are included in the database twice.</p>
+<p>It should be noted that some movie names are duplicated, when two different
+films happen to have the same name, or when a movie is remade at a later date.
+Name and year together make a unique identifier in these cases.</p>
+<p>There are 4 data files in the course folder. The ratings themselves are found in
+<em>ratingsData.txt</em>, one rating per line. Users and movies are labeled by random,
+numerical IDs in the ratings data. A separate <em>movieData.txt</em> file links the
+numerical movieID to title, year, and genre, while the <em>userData.txt</em> file
+provides basic demographics for each user, including age, gender, occupation and
+1zipcode. A fourth file <em>ratingsDataPlus.txt</em> combining limited information from
+all 3 files is provided as well for your convenience.</p>
+</div>
+<div id="data-manipulation" class="section level2">
+<h2><span class="header-section-number">2.2</span> Data Manipulation</h2>
+<p>The first step will be to read in the data. I think this is fairly
+straightforward, although there are non-alpha-numeric characters among the movie
+names, which may affect the arguments to read.table.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="movie.html#cb1-1"></a>userDat    =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;userData.txt&quot;</span>, <span class="dt">header=</span>T, <span class="dt">row.names=</span><span class="dv">1</span>, <span class="dt">as.is=</span>T, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">fill=</span>T)</span>
+<span id="cb1-2"><a href="movie.html#cb1-2"></a>movieDat   =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;movieData.txt&quot;</span>, <span class="dt">header=</span>T,<span class="dt">row.names=</span><span class="dv">1</span>,<span class="dt">as.is=</span>T,<span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>,<span class="dt">quote=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-3"><a href="movie.html#cb1-3"></a>ratingsDat =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;ratingsData.txt&quot;</span>, <span class="dt">header=</span>T,<span class="dt">as.is=</span>T,<span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
+</div>
+<div id="data-visualization" class="section level2">
+<h2><span class="header-section-number">2.3</span> Data Visualization</h2>
+</div>
+<div id="statistical-analysis" class="section level2">
+<h2><span class="header-section-number">2.4</span> Statistical Analysis</h2>
+</div>
+<div id="results" class="section level2">
+<h2><span class="header-section-number">2.5</span> Results</h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="movie.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -205,7 +249,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rskccc/rbook06-references.Rmd",
+"link": "https://github.com/rskccc/rbook01-movie.Rmd",
 "text": "Edit"
 },
 "history": {

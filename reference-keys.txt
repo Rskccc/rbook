@@ -1,4 +1,8 @@
-fig:nice-fig
-tab:nice-tab
-prerequisites
-intro
+introduction-about-final-projects
+final-project
+movie
+introduction
+data-manipulation
+data-visualization
+statistical-analysis
+results

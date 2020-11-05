@@ -1,5 +1,8 @@
-introduction-about-final-projects
 final-project
+what-is-it
+what-are-the-project-options
+what-needs-to-be-in-the-report
+how-should-the-report-be-formatted
 movie
 introduction
 data-manipulation

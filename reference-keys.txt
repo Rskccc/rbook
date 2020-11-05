@@ -3,9 +3,6 @@ what-is-it
 what-are-the-project-options
 what-needs-to-be-in-the-report
 how-should-the-report-be-formatted
+example
 movie
-introduction
-data-manipulation
-data-visualization
-statistical-analysis
-results
+background
